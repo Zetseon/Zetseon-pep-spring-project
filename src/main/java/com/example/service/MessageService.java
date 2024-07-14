@@ -46,7 +46,6 @@ public class MessageService {
     }
 
     public boolean updateMessageById(Integer messageId, String newText){
-        System.out.println("___________________" + newText);
         if(newText == null || newText.isEmpty() || newText.isBlank() || newText.length() > 255) {
             return false;
         }
