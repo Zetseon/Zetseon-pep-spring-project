@@ -46,7 +46,7 @@ public class MessageService {
     }
 
     public boolean updateMessageById(Integer messageId, String newText){
-        if(newText == null || newText.isEmpty() || newText.isBlank() || newText.length() > 255) {
+        if(newText.isEmpty() || newText.isBlank() || newText.length() > 255) {
             return false;
         }
         Optional<Message> message= messageRepository.findById(messageId);
